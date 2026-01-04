@@ -1,0 +1,5 @@
+CREATE DATABASE devopsdb;
+
+CREATE USER 'appuser'@'%' IDENTIFIED BY 'admin123';
+GRANT ALL PRIVILEGES ON devopsdb.* TO 'appuser'@'%';
+FLUSH PRIVILEGES;
