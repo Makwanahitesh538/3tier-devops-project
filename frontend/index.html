@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3 Tier DevOps Project</title>
+</head>
+<body>
+  <h1>Welcome to 3 Tier DevOps Project</h1>
+  <button onclick="loadData()">Get Data</button>
+  <p id="output"></p>
+
+<script>
+function loadData() {
+  fetch("http://BACKEND_IP:3000/api")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("output").innerText = data.message;
+    });
+}
+</script>
+</body>
+</html>
